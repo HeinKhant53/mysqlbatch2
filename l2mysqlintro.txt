@@ -1,0 +1,128 @@
+=>Comments
+
+Single Line Comment
+# comment here
+-- comment here
+/* comment here */
+
+
+Multi Line Comment
+/*
+ Comment Here
+*/
+
+---------------------------------
+
+
+=>Arithmethic Operators 
+
+Opeartor		Meaning 			Operate On
++ (Add)			Addition			Numeric Value
+- (Subtract)		Subtraction			Numberic Value
+* (Multiply)		Multipliation			Numberic Value
+/ (Divide) 		Division			Numberic Value
+% (Modulus)		Return remainder of a divison	Numberic Value
+
+----------------------------------
+
+
+->Exercise Addition Operator = Syantax
+
+select = SELECT  (swe thot mal)
+
+SELECT 10+2; #resut 12
+select 10+2; #resut 12
+
+SELECT 10 + 2; #resut 12
+
+SELECT "10" + 2; #resut 12
+SELECT "10" + "2"; #resut 12
+
+SELECT 10+2 , 20+2;  #resut 12  22
+
+No Using 
+SELECT 100 + 'aungaung'; #resut 100
+SELECT '100'+ 'aungaung'; #resut 100
+SELECT 'aungaung' + "kyawkyaw"; #resut 0
+
+
+->Exercise Subtration Operator = Syantax
+
+SELECT 10-2; #resut 8
+select 10-2; #resut 8
+
+SELECT 10 - 2; #resut 8
+
+SELECT "10" - 2; #resut 8
+SELECT "10" - "2"; #resut 8
+
+SELECT 10-2 , 20-2;  #resut 8  18
+
+
+->Exercise Multipliation Operator = Syantax
+
+SELECT 10*2; #resut 20
+select 10*2; #resut 20
+
+SELECT 10 * 2; #resut 20
+
+SELECT "10" * 2; #resut 20
+SELECT "10" * "2"; #resut 20
+
+SELECT 10*2 , 20*2;  #resut 20  40
+
+
+->Exercise Division Operator = Syantax
+
+SELECT 10/2; #resut 5
+select 10/2; #resut 5
+
+SELECT 10 / 2; #resut 5
+
+SELECT "10" / 2; #resut 5
+SELECT "10" / "2"; #resut 5
+
+SELECT 10/2 , 5/2;  #resut 5  2
+
+SELECT 12/0; #resut null
+
+SELECT 50 DIV 2; #result 25
+SELECT 50DIV2; #result error
+
+
+->Exercise Modulus Operator = Syantax
+
+SELECT 10%4; #resut 2
+select 10%4; #resut 2
+
+SELECT 10 % 4; #resut 2
+
+SELECT "10" % 4; #resut 2
+SELECT "10" % "4"; #resut 2
+
+SELECT 10%4 , 5%2;  #resut 2  1
+SELECT 50 MOD 3; #result 2
+Using Method
+SELECT MOD(50,3); #result 2 
+
+-------------------------------------------
+
+=>CRUD
+create / Read / Update / Delete
+
+CREATE DATABASE - creates a new databse
+CREATE TABLE - creates a new table
+
+ALTER DATABASE - modifies a database
+ALTER TABLE - modifies a table
+
+DROP DATABASE - deletes a database
+DROP TABLE - deletes a table
+
+INSERT INTO - inserts new data into a database
+
+SELECT - extracts data from database (Read)
+UPDATE - updates data in a database
+DELETE - deletes data in a database
+
+

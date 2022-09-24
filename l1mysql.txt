@@ -1,0 +1,58 @@
+Databases
+
+
+create database
+database name --> small letter
+
+myanmar font --> utf8_unicode_ci
+
+
+create new table
+table name --> small letter, s 
+
+table structure Name --> small letter 
+table structure Type --> 
+INT = integer <Number>
+VARCHAR = <Number & String->Small>  
+TEXT = <Number & String->Many>
+!! phone number -> VARCHAR
+
+
+table structure Length/Values -- > 
+
+
+null 
+-on --> ireru kamoshiremasen
+ireranai - null
+ireru - value
+
+-off 
+ireranai - blank
+ireru - value
+
+
+A I <auto increment>
+-on --> primary & Index -> Primary (Eg:id,bar code)
+(number auto increase)
+table to connect other table / unique
+
+one table - only primary key (unit desu) 
+
+same id  
+#1062 - Duplicate entry '102' for key 'PRIMARY'
+
+
+increment ga sharitai --> opeartions > auto_increment
+
+
+empty - table data delete
+drop - table delete
+
+
+Index
+-UNIQUE (Only one has)
+
+Defautl
+-None
+-As Defined > Myanmar
+(User not value -> default Myanmar pay)
