@@ -15,6 +15,7 @@ DROP DATABASE wdf7594;
 USE wdf7594;
 
 ->About Database Naming
+
 *CAN CREATE
 Create Database book_stop;
 Create Database SchoolApp;

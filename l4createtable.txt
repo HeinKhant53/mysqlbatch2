@@ -1,0 +1,84 @@
+=>Choose Database
+USE wdf7594;
+
+
+=>Show Tables
+SHOW TABLES;
+SHOW FULl TABLES;   (Table Type ko pya)
+
+*Check table from current db to another db
+SHOW TABLES FROM databasename;
+SHOW TABLES IN databasename;
+
+
+SHOW FULL TABLES FROM databasename;
+SHOW FULL TABLES IN databasename;
+
+
+
+
+=>Show Table Structure ( One Table )
+->Method 1
+DESCRIBE  tablename;   (Show Table Structure)
+DESC tablename;
+
+->Method 2
+SHOW COLUMNS FROM tablename;
+
+*Check table structure from current db to another db
+SHOW COLUMNS FROM databasename.tablename;
+SHOW COLUMNS FROM tablename IN databasename;
+
+
+
+
+=>Create Table 
+->Syntax
+CREATE TABLE tablename(            
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+    ...
+);
+
+Note: tablename is plur
+
+Example:
+CREATE TABLE persons(
+    personid INT,
+    firstname VARCHAR(255),   1 to 255
+    lastname VARCHAR(255),
+    city VARCHAR(255),
+    address VARCHAR(255)
+);
+
+
+=>Drop Table (Single)
+DROP TABLE tablename;
+DROP TABLE IF EXISTS tablename;
+
+*Delete table from cuurent db to another db
+DROP TABLE databasename.tablename;
+DROP TABLE IF EXISTS databasename.tablename;
+
+=>Drop Table (Multi)
+DROP TABLE tablename,tablename,tablename,...;
+DROP TABLE IF EXISTS tablename,tablename,tablename,...;
+
+*Delete table from cuurent db to another db
+DROP TABLE databasename.tablename,databasename.tablename,databasename.tablename,...;
+DROP TABLE IF EXISTS databasename.tablename,databasename.tablename,databasename.tablename,...;
+
+---------------------------------------------------------------------
+
+*Exerice
+CREATE TABLE abc(
+    name VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS abc(
+    name VARCHAR(255)
+);
+
+Again creating abc
+#error
