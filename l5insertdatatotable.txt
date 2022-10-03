@@ -1,0 +1,42 @@
+=>Insert Single Data
+
+->Syntax
+
+-->Method1
+INSERT INTO tablename (column1,column2,column3,..)
+VALVE (value1,value2.value3,...) ;
+
+
+-->Method2
+INSERT INTO tablename
+VALVE (value1,value2,value3,...);
+
+-------------------------------------
+
+
+=>Exerice
+
+CREATE TABLE persons(
+    personid INT,
+    firstname VARCHAR(20),
+    lastname VARCHAR(20),
+    city VARCHAR(15),
+    address VARCHAR(200)
+);
+
+DESC persons;
+
+INSERT INTO persons (personid,firstname,lastname,city,address)
+VALUE (1,'tin htut','aung','Mandalay','no.9,myittar st');
+
+INSERT INTO persons (personid,firstname,lastname,city)
+VALUE (2,'tin htut','aung','Mandalay');
+
+SELECT * FROM persons;
+
+INSERT INTO persons VALUES (3,'aung','tin htut','yangon','no.10,thitsr st');
+
+INSERT INTO persons VALUES (4,'aung','kyaw','no10,thitsarst','yangon');
+
+
+INSERT INTO persons VALUES (5,'aung','kyaw','thitsar','yangon');

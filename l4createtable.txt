@@ -82,3 +82,28 @@ CREATE TABLE IF NOT EXISTS abc(
 
 Again creating abc
 #error
+
+
+=>TRUNCATE  = empty data
+
+CREATE TABLE IF NOT EXISTS monitors(
+    brand VARCHAR(100),
+    price INT()
+);
+
+DESC monitors;
+DESCRIBE monitors;
+
+SELECT * FROM monitors;
+
+DROP TABLE IF EXISTS wdf7594.monitors;
+
+DELETE FROM monitors;
+DELETE FROM wdf7594.monitors;
+
+TRUNCATE TABLE monitors;
+TRUNCATE Table wdf7594.monitors;
+
+------------------------------------------
+
+
