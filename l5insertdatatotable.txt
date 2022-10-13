@@ -40,3 +40,57 @@ INSERT INTO persons VALUES (4,'aung','kyaw','no10,thitsarst','yangon');
 
 
 INSERT INTO persons VALUES (5,'aung','kyaw','thitsar','yangon');
+
+
+
+--------------------------------------------------------------
+
+=>Insert Multi Data
+Syntax
+
+->Method1
+
+INSERT INTO tablename (column1,column2,column3,...)
+VALVES (value1,value2,value3,...),
+        (value1,value2,value3,...),
+        ...;
+
+
+->Method2
+INSERT INTO tablename
+VALUES (value1,value2,value3,...),
+        (value1,value2,value3,...),
+        ...;
+
+
+=>Exerice
+
+CREATE TABLE persons(
+    personid INT,
+    firstname VARCHAR(20),
+    lastname VARCHAR(20),
+    city VARCHAR(15),
+    address VARCHAR(200)
+);
+
+INSERT INTO  persons (personid,firstname,lastname,city,address)
+VALUE (7,'nu','nu','mandalay','no.19,myittar st'),
+        (8,'mya','may','mandalay','no.29,myittar st'),
+        (9,'lu lu','aung','yangon','no.39,myittar st');
+
+
+
+
+INSERT INTO  persons (personid,firstname,lastname,city,address)
+VALUES (10,'yu','yu','mandalay','no.31,myittar st'),
+        (11,'kyaw','kyaw','mandalay','no.32,myittar st'),
+        (12,'hnin','hnin','yangon','no.33,myittar st');
+
+
+
+INSERT INTO  persons
+VALUES (13,'pa','pa','mawlamyine','no.19,myittar st'),
+        (14,'hla','hla','m','no.19,myittar st'),
+        (15,'ma','ma','bago','no.34,myittar st');
+
+----------------------------------------------------------

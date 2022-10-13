@@ -1,0 +1,15 @@
+=>Select Data
+
+*Syntax
+
+->Method1
+SELECT * FROM tablename;
+
+
+->Method2
+SELECT column1,column2,column3,... FROM tablename;
+
+->Exerice
+SELECT * FROM persons;
+
+SELECT firstname,city FROM persons;

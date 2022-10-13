@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS abc(
 Again creating abc
 #error
 
-
+-----------------------------------------
 =>TRUNCATE  = empty data
 
 CREATE TABLE IF NOT EXISTS monitors(
@@ -107,3 +107,80 @@ TRUNCATE Table wdf7594.monitors;
 ------------------------------------------
 
 
+
+=>RENAME Table
+
+*Syntax
+
+ALTER TABLE tablename
+RENAME TO newtablename
+
+
+->Exerice
+
+CREATE TABLE stocks(
+    item VARCHAR(100),
+    stock INT
+);
+
+SHOW TABLES;
+
+DESC stocks;
+
+INSERT INTO stocks(item,stock)
+VAlUES ("desktop",20),
+        ("laptop",10),
+        ("projector",5);
+
+SELECT * FROM stocks;
+
+ALTER TABLE stocks
+RENAME TO itaccessories;
+
+SHOW TABLES;
+
+SELECT * FROM itaccessories;
+
+
+-----------------------------------------------------
+
+
+=>Add New Columns to table
+*Syntax
+
+->Single
+    ->Method 1
+    ALTER TABLE tablename
+    ADD COLUMN columnname datatype;
+
+    ->Method 2
+    ALTER TABLE tablename
+    ADD COLUMN columnname datatype FRIST|AFTER existingcolumname;
+
+->Multi
+    ->Method 1
+    ALTER TABLE tablename
+    ADD COLUMN columnname1 datatype,
+    ADD COLUMN columnname2 datatype,
+    ADD COLUMN columnname3 datatype,
+    ...;
+
+
+    ->Method 2
+    ALTER TABLE tablename
+    ADD COLUMN columnname1 datatype FRIST|AFTER existingcolumname,
+    ADD COLUMN columnname2 datatype FRIST|AFTER existingcolumname,
+    ADD COLUMN columnname3 datatype FRIST|AFTER existingcolumname,
+    ...;
+
+
+
+->Exerice
+SELECT * FROM itaccessories;
+
+ALTER Table itaccessories
+ADD COLUMN brand VARCHAR(50);
+
+DESC itaccessories;
+
+SELECT * FROM itaccessories;
