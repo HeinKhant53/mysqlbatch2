@@ -184,3 +184,19 @@ ADD COLUMN brand VARCHAR(50);
 DESC itaccessories;
 
 SELECT * FROM itaccessories;
+
+
+NOte : FIRST for as the first filed name
+=========================================
+ALTER TABLE itaccessories
+ADD COLUMN unitprice DECIMAL(10,2) NOT NULL FIRST;
+
+DESC itaccessories;
+SELECT * FROM itaccessories;
+
+
+ALTER TABLE itaccessories
+ADD COLUMN madeby VARCHAR(50) NOT NULL AFTER item VARCHAR(20);
+
+DESC itaccessories;
+SELECT * FROM itaccessories;
