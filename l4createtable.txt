@@ -196,7 +196,70 @@ SELECT * FROM itaccessories;
 
 
 ALTER TABLE itaccessories
-ADD COLUMN madeby VARCHAR(50) NOT NULL AFTER item VARCHAR(20);
+ADD COLUMN madeby VARCHAR(50) NOT NULL AFTER item;
 
 DESC itaccessories;
 SELECT * FROM itaccessories;
+
+
+->Exerice (Multi)
+
+ALTER TABLE itaccessories
+ADD COLUMN status INT AFTER brand,
+ADD COLUMN createdby INT NOT NULL AFTER status;
+
+DESC itaccessories;
+SELECT * FROM itaccessories;
+
+INSERT INTO itaccessories(unitprice,item,madeby,stock,brand,status,createdby)
+VAlUES (10,'keyboard','china',30,'a4',1,1001),
+        (5,'mouse','taiwan',50,'logitech',1,1008);
+
+
+SELECT * FROM itaccessories;
+
+-------------------------------------
+
+
+
+=>RENAME column in table
+*Syntax
+
+ALTER TABLE tablename
+CHANGE COLUMN oldcolumnname newcolumnname datatype;
+
+
+->Exerice
+
+ALTER TABLE itaccessories
+CHANGE COLUMN stock totalqty INT;
+
+ALTER TABLE itaccessories
+CHANGE COLUMN madeby manufactureby VARCHAR(30);
+
+
+ALTER TABLE itaccessories
+CHANGE COLUMN manufactureby manufactureby VARCHAR(50);
+
+DESC itaccessories;
+SELECT * FROM itaccessories;
+
+-------------------------------------------------------------
+
+
+
+
+=>MODIFY column in table (Use for change column data type)
+
+*Syntax 
+
+->Single 
+ALTER TABLE tablename
+MODIFY columnname newdatatype;
+
+->Multi
+ALTER TABLE tablename
+MODIFY columnname newdatatype,
+MODIFY columnname newdatatype,
+MODIFY columnname newdatatype,
+...;
