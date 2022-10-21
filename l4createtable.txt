@@ -263,3 +263,110 @@ MODIFY columnname newdatatype,
 MODIFY columnname newdatatype,
 MODIFY columnname newdatatype,
 ...;
+
+
+->Exerice (Single)
+
+DESC itaccessories;
+
+ALTER TABLE itaccessories
+MODIFY manufactureby VARCHAR(30);
+
+DESC itaccessories;
+SELECT * FROM itaccessories;
+
+ALTER TABLE itaccessories
+MODIFY manufactureby VARCHAR(50) NOT NULL;
+
+ALTER TABLE itaccessories
+MODIFY item VARCHAR(100) NOT NULL;
+
+
+DESC itaccessories;
+SELECT * FROM itaccessories;
+
+->Exerice (Multi)
+
+DESC itaccessories;
+
+ALTER TABLE itaccessories
+MODIFY item VARCHAR(50) NULL,
+MODIFY brand VARCHAR(30) NOT NULL;
+
+#Error  = bcz of NULL already in  data table
+#Warning = new version
+ALTER TABLE itaccessories
+MODIFY status  INT NOT NULL;
+
+
+DESC itaccessories;
+SELECT * FROM itaccessories;
+
+-----------------------------------
+
+
+=>Move Column
+
+ALTER TABLE itaccessories
+MODIFY unitprice DECIMAL(12,2) NOT NULL 
+AFTER brand;
+
+
+
+
+DESC itaccessories;
+SELECT * FROM itaccessories;
+
+---------------------------------------------------
+
+
+=>Drop Columns in table
+
+*Syntax (Single)
+ALTER TABLE tablename
+DROP COLUMN columnname;
+
+
+*Syntax (Multi)
+ALTER TABLE tablename
+DROP COLUMN columnname1,
+DROP COLUMN columnname2,
+...;
+
+
+->Exerice
+
+ALTER TABLE itaccessories
+DROP COLUMN status;
+
+
+ALTER TABLE itaccessories
+DROP COLUMN manufactureby,
+DROP COLUMN createdby;
+
+
+DESC itaccessories;
+SELECT * FROM itaccessories;
+
+
+
+------------------------------
+
+=>Add Primary Key (INT)
+
+*Syntax
+
+->Method 1
+ALTER TABLE itaccessories
+ADD COLUMN id INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
+
+SHOW INDEX FROM itaccessories;
+
+->Method 2
+ALTER TABLE itaccessories
+ADD COLUMN id INT NOT NULL AUTO_INCREMENT FRIST,
+ADD PRIMARY KEY(id);
+
+
+=>Show & Check Key name
+SHOW INDEX FROM tablename;
