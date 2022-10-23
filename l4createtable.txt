@@ -370,3 +370,33 @@ ADD PRIMARY KEY(id);
 
 =>Show & Check Key name
 SHOW INDEX FROM tablename;
+
+
+------------------------------------
+
+
+=>Drop Primary Key
+
+DESC itaccessories;
+SELECT * FROM itaccessories;
+SHOW INDEX FROM itaccessories;
+
+#Error = we need to remove auto increment (By modify)
+ALTER TABLE itaccessories
+DROP PRIMARY KEY;
+
+
+***First (remove AUTO_INCREMENT)
+ALTER TABLE itaccessories 
+MODIFY id INT NOT NULL;
+
+***Second
+ALTER TABLE itaccessories
+DROP PRIMARY KEY;
+
+DESC itaccessories;
+SELECT * FROM itaccessories;
+SHOW INDEX FROM itaccessories;
+
+
+---------------------------------------------
