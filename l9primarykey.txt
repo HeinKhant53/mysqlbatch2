@@ -17,3 +17,159 @@ CREATE TABLE IF NOT EXISTS persons(
     age INT,
     PRIMARY KEY (id)
 );
+
+
+
+->Exerice
+
+CREATE TABLE IF NOT EXISTS computers(
+    brand VARCHAR(255),
+    type VARCHAR(255)
+);
+
+DESC computers;
+
+INSERT INTO computers(brand,type)
+VAlUE ('asus','china'),
+        ('asus','china');
+
+SELECT * FROM computers;
+
+DROP TABLE IF EXISTS computers;
+
+
+
+
+CREATE TABLE IF NOT EXISTS computers(
+    brand VARCHAR(255),
+    type VARCHAR(255),
+    PRIMARY KEY (brand)
+);
+
+DESC computers;
+
+SHOW INDEX FROM computers;
+
+#Error
+INSERT INTO computers(brand,type)
+VAlUE ('asus','china'),
+        ('asus','china');
+
+INSERT INTO computers(brand,type)
+VAlUE ('asus','china'),
+        ('dell','china');
+
+SELECT * FROM computers;
+
+DROP TABLE IF EXISTS computers;
+
+
+
+
+CREATE TABLE IF NOT EXISTS computers(
+    id INT NOT NULL PRIMARY KEY,
+    brand VARCHAR(255),
+    type VARCHAR(255)
+);
+
+DESC computers;
+
+SHOW INDEX FROM computers;
+
+#Error
+INSERT INTO computers(brand,type)
+VAlUE ('asus','china');
+
+
+INSERT INTO computers(id,brand,type)
+VAlUE (1,'asus','china');
+
+
+#Error
+INSERT INTO computers(id,brand,type)
+VAlUE (1,'acer','china');
+
+
+INSERT INTO computers(id,brand,type)
+VAlUE (2,'acer','china');
+
+
+SELECT * FROM computers;
+
+DROP TABLE IF EXISTS computers;
+
+
+
+
+CREATE TABLE IF NOT EXISTS computers(
+    id INT NOT NULL AUTO_INCREMENT,
+    brand VARCHAR(255),
+    type VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+DESC computers;
+
+SHOW INDEX FROM computers;
+
+
+INSERT INTO computers(brand,type)
+VAlUE ('asus','china');
+
+#Error
+INSERT INTO computers(id,brand,type)
+VAlUE (1,'asus','china');
+
+INSERT INTO computers(id,brand,type)
+VAlUE (2,'asus','china');
+
+
+INSERT INTO computers(brand,type)
+VAlUE ('acer','china');
+
+INSERT INTO computers(id,brand,type)
+VAlUE (10,'hp','thai');
+
+INSERT INTO computers(brand,type)
+VAlUE ('samsung','koera');
+
+INSERT INTO computers(id,brand,type)
+VAlUE (4,'samsung','koera');
+
+INSERT INTO computers(brand,type)
+VAlUE ('nokia','thai');
+
+SELECT * FROM computers;
+
+
+
+
+CREATE TABLE IF NOT EXISTS members(
+    id INT NOT NULL AUTO_INCREMENT,
+    firstname VARCHAR(255) NOT NULL,
+    lastname  VARCHAR(255) NOT NULL,
+    age INT NOT NULL,
+    status VARCHAR(100) NOT NULL DEFAULT 'employed',
+    PRIMARY KEY (id)
+);
+
+DESC members;
+
+SHOW INDEX FROM members;
+
+INSERT INTO members(firstname,lastname,age,status)
+VAlUE ('Aye','Mya',25,'employed');
+
+INSERT INTO members(firstname,lastname,age)
+VAlUE ('Hnin','Mya',25);
+
+INSERT INTO members
+VAlUES (3,'Yu','Ya',20,'employed');
+
+
+#Error
+INSERT INTO members
+VAlUES ('Bu','Hta',20);
+
+
+SELECT * FROM members;
