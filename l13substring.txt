@@ -9,7 +9,7 @@ SELECT SUBSTRING ('text',start,end);
 SELECT SUBSTR ('text',start,end);
 
 ----------------------------------------------------
-->Exerice
+->Exerice (SUBSTRING)
 
 SELECT SUBSTRING ('Hello World',1,4);       #Hell
 SELECT SUBSTRING ('Hello World',0,4);       #empty
@@ -20,7 +20,77 @@ SELECT SUBSTRING ('Hello World',7);       #World
 
 SELECT SUBSTRING ('MySql Online Class',7);       #Online Class
 
+SELECT SUBSTRING ('Hello, I am Mr.Anton',1,10);     #Hello, I a
+
+#Error
+SELECT SUBSTRING ('Hello, I'm Mr.Anton',1,10);
+
+*Soution
+SELECT SUBSTRING ("Hello, I'm Mr.Anton",1,10);
+SELECT SUBSTRING ('Hello, I\'m Mr.Anton',1,10);
+
+SELECT SUBSTRING ('Hello World',-7);       #o World
+a nout ka ye
+
+SELECT SUBSTRING ('MySql Online Class',-7);       #e Class
+
+--------------------------------------------------------
+
+->Exerice
+
+Select * FROM persons;
+SELECT SUBSTRING(address,1,10) FROM persons;
+SELECT SUBSTRING(address,1,5) FROM persons;
+
+=Using Aliases
+SELECT SUBSTRING(address,1,10) AS street FROM persons;
+SELECT SUBSTRING(address,1,10) AS 'short address' FROM persons;
+
+
+
 
 Note: MySql is 1 ka sa
         start is 1 ka sa
         end is  4 ka a lone number
+
+
+ --------------------------------------------------------
+
+
+->Exerice (SUBSTR)
+
+SELECT * FROM persons;
+SELECT SUBSTR(address,1,10) FROM persons;
+SELECT SUBSTR(address,1,5) FROM persons;
+
+=Using Aliases
+SELECT SUBSTR(address,1,10) AS street FROM persons;
+SELECT SUBSTR(address,1,10) AS 'short address' FROM persons;
+
+
+
+----------------------------------------------------------------
+
+
+=>SUBSTRING() with CONCAT()
+
+->Syntax
+SELECT  CONCAT(SUBSTRING(columnname,start,end),'...') FROM tablename;
+
+->Exerice
+SELECT CONCAT (SUBSTRING(address,1,7),'...') FROM persons;
+
+SELECT CONCAT (SUBSTRING(address,1,7),'...') AS street FROM persons;
+
+SELECT CONCAT (
+        SUBSTRING(address,1,7),'...'
+        ) 
+AS street 
+FROM persons;
+
+
+SELECT CONCAT (SUBSTR(address,1,7),'...') AS street FROM persons;
+
+
+--------------------------------------------------------------------
+

@@ -1,0 +1,37 @@
+=>REPLACE
+
+->Syntax
+
+SELECT REPLACE(original, ori part,new);
+--------------------------------------------
+
+->Exerice
+
+SELECT REPLACE ("Hello World",'Hello',"Zer");       #Zero World
+
+SELECT REPLACE ("Hello World",'hell',"Zer");        #Hello World
+Note: REPLACE is Case Sensitive
+
+SELECT REPLACE ("Hello World",'hello',"Zer");        #Hello World
+Note: REPLACE is original same ori part
+
+SELECT REPLACE ("Hello World",'o',"0");        #Hell0 
+
+SELECT REPLACE ("Hell0 World",'0',"*");        #Hell* World
+
+SELECT REPLACE ("Hello World",'l',"7");        #He77o Wor7d
+
+
+SELECT REPLACE ("coffee milk bread cheese",' ',"and");
+#coffee and milk address bread and cheese
+
+---------------------------------------------------------
+
+->Exerice
+
+SELECT city FROM persons;
+
+SELECT REPLACE(city,'m','M') FROM  persons;
+
+
+SELECT REPLACE(city,'m','M') AS capital FROM  persons;
