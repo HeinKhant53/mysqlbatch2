@@ -1,0 +1,26 @@
+=>SUBSTRING
+
+->Syntax
+
+-->Method1 = SUBSTRING();
+SELECT SUBSTRING ('text',start,end);
+
+-->Method2 = SUBSTR();
+SELECT SUBSTR ('text',start,end);
+
+----------------------------------------------------
+->Exerice
+
+SELECT SUBSTRING ('Hello World',1,4);       #Hell
+SELECT SUBSTRING ('Hello World',0,4);       #empty
+
+SELECT SUBSTRING ('Hello World',2,4);       #ello
+
+SELECT SUBSTRING ('Hello World',7);       #World
+
+SELECT SUBSTRING ('MySql Online Class',7);       #Online Class
+
+
+Note: MySql is 1 ka sa
+        start is 1 ka sa
+        end is  4 ka a lone number

@@ -352,51 +352,25 @@ SELECT * FROM itaccessories;
 
 ------------------------------
 
-=>Add Primary Key (INT)
 
-*Syntax
-
-->Method 1
-ALTER TABLE itaccessories
-ADD COLUMN id INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
-
-SHOW INDEX FROM itaccessories;
-
-->Method 2
-ALTER TABLE itaccessories
-ADD COLUMN id INT NOT NULL AUTO_INCREMENT FRIST,
-ADD PRIMARY KEY(id);
+=>CREATE TABLE AS Statement (Clone | Copy)
 
 
-=>Show & Check Key name
-SHOW INDEX FROM tablename;
+->Syntax
+
+CREATE TABLE IF NOT EXISTS newtable AS
+SELECT * FROM existingtable;
+
+Note: Primary key, AUTO_INCREMENT, default ma par
+
+DESC members;                -> Structure
+SELECT * FROM members;       ->  Information
+
+CREATE TABLE IF NOT EXISTS workers AS
+SELECT * FROM members;
 
 
-------------------------------------
+DESC workers;
+SELECT * FROM workers;
 
-
-=>Drop Primary Key
-
-DESC itaccessories;
-SELECT * FROM itaccessories;
-SHOW INDEX FROM itaccessories;
-
-#Error = we need to remove auto increment (By modify)
-ALTER TABLE itaccessories
-DROP PRIMARY KEY;
-
-
-***First (remove AUTO_INCREMENT)
-ALTER TABLE itaccessories 
-MODIFY id INT NOT NULL;
-
-***Second
-ALTER TABLE itaccessories
-DROP PRIMARY KEY;
-
-DESC itaccessories;
-SELECT * FROM itaccessories;
-SHOW INDEX FROM itaccessories;
-
-
----------------------------------------------
+-------------------------------------
