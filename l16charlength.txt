@@ -1,0 +1,43 @@
+=>CHAR_LENGTH   <Counts Characters in String>
+
+->Synatx
+
+SELECT CHAR_LENGTH(string);
+Note: 1 ka Sa
+
+SELECT CHAR_LENGTH("Hello World");  #11
+
+------------------------------------------------------
+
+->Exerice
+
+SELECT * FROM persons;
+
+SELECT CHAR_LENGTH (firstname) FROM persons;
+
+SELECT firstname,CHAR_LENGTH (firstname) AS 'total count' FROM persons;
+
+------------------------------------------------------
+
+
+=>CHAR_LENGTH() with CONCAT()
+
+SELECT CONCAT(firstname,' is ',CHAR_LENGTH(firstname), ' characters  long') FROM persons;
+
+SELECT CONCAT(firstname,' is ',CHAR_LENGTH(firstname), ' characters  long') AS 'length' FROM persons;
+
+SELECT 
+    CONCAT(firstname,' is ',CHAR_LENGTH(firstname), ' characters  long') AS 'length'
+FROM persons;
+
+
+
+sql-format.com
+
+
+
+
+
+
+
+
