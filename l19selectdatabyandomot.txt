@@ -112,3 +112,45 @@ WHERE condition1 OR condition2 OR condition3 ...;
    SELECT * FROM customers
  WHERE city='yangon' OR gender='female';
 
+
+----------------------------------------------------
+
+
+=>NOT
+->Syntax
+
+SELECT * FROM tablename
+WHERE NOT condition1;
+
+----------------------------------------------------
+
+->Exerice
+SELECT * FROM customers;
+
+SELECT * FROM customers;
+WHERE NOT country = 'myanmar';
+
+SELECT * FROM customers;
+WHERE NOT city = 'yangon';
+
+----------------------------------------------------
+
+=>AND , OR and NOT
+
+SELECT * FROM customers;
+
+SELECT * FROM customers;
+WHERE NOT country = 'myanmar' AND NOT city='mandalay';
+
+
+SELECT * FROM customers;
+WHERE NOT country = 'myanmar' AND NOT city='yangon' AND NOT city='mandalay';
+
+
+SELECT * FROM customers;
+WHERE NOT country = 'myanmar' AND ( city='bago' OR city='mandalay');
+
+
+
+
+----------------------------------------------------
