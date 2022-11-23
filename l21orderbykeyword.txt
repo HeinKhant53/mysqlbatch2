@@ -1,0 +1,36 @@
+=>ORDER BY Keyword (Sorting our results)
+
+->Syntax
+
+SELECT column1,column2,... FROM tablename
+ORDER BY columnname ASC|DESC
+
+.................................................
+->Exerice
+
+SELECT * FORM customers;
+
+
+SELECT * FORM customers
+ORDER BY firstname;
+
+SELECT * FORM customers
+ORDER BY firstname ASC;
+
+SELECT * FORM customers
+ORDER BY firstname DESC;
+
+SELECT * FORM customers
+ORDER BY amount;
+
+SELECT * FORM customers
+ORDER BY amount DESC;
+
+SELECT * FORM customers
+WHERE amount > 200000
+ORDER BY amount ASC;
+
+.................................................
+.................................................
+.................................................
+.................................................
