@@ -30,7 +30,21 @@ SELECT * FORM customers
 WHERE amount > 200000
 ORDER BY amount ASC;
 
+
+SELECT * FORM customers
+ORDER BY firstname;
+
+SELECT * FORM customers
+ORDER BY firstname,age;
+
+SELECT firstname,lastname,amount,city FORM customers
+ORDER BY 2;  
+<firstname ko order lot>
+
+SELECT firstname,lastname,amount,city FORM customers
+ORDER BY 3;  
+
+SELECT firstname,lastname,amount,city FORM customers
+ORDER BY 5 DESC;  
 .................................................
-.................................................
-.................................................
-.................................................
+
