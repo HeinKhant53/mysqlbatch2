@@ -64,3 +64,45 @@ WHERE firstname LIKE 'a____%';
 
 ................................................................................
 
+->Exercise (LIKE '____')
+
+SELECT * FROM customers;
+
+SELECT * FROM customers
+WHERE amount LIKE '____';
+
+SELECT * FROM customers
+WHERE amount LIKE '_____';
+
+SELECT * FROM customers
+WHERE amount LIKE '______';
+
+................................................................................
+
+->Exercise (LIKE '%')  % is anything
+
+SELECT * FROM customers;
+WHERE amount LIKE '%';
+
+SELECT * FROM customers
+WHERE firstname LIKE '%';
+
+SELECT * FROM customers
+WHERE firstname LIKE '_%';
+
+#result = _facebook
+SELECT * FROM customers
+WHERE amount LIKE '\_%';
+
+SELECT * FROM customers
+WHERE amount LIKE '%_%';
+
+#result = face_book
+SELECT * FROM customers
+WHERE amount LIKE '%\_%';
+
+#result = 10%happy
+SELECT * FROM customers
+WHERE amount LIKE '%\%%';
+
+................................................................................
