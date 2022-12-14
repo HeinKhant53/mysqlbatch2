@@ -12,7 +12,7 @@ SELECT * FROM customers;
 
 SELECT city FROM customers;
 
-SELECT DISTINCT city FROM customers;
+SELECT DISTINCT city FROM customers; #result name
 
 SELECT DISTINCT city FROM customers ORDER BY city;
 
@@ -23,15 +23,11 @@ SELECT DISTINCT age FROM customers ORDER BY age;
 
 SELECT DISTINCT age,city FROM customers ORDER BY age;
 
-SELECT COUNT(DISTINCT city) FROM customers;
-
-
-
-
-
-
+SELECT COUNT(DISTINCT city) FROM customers; #result 7 number
 
 .......................................................
+
+=>GROUP BY Clause
 .......................................................
 .......................................................
 .......................................................
