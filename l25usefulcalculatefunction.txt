@@ -67,7 +67,67 @@ WHERE city = 'yangon';
 
 SELECT AVG(amount) FROM customers
 WHERE city = 'yangon';
+
+SELECT AVG(age) FROM customers
+WHERE country = 'thailand';
 ...........................................
 
+->Exercise > MIN()
+
+SELECT MIN(age) FROM customers;
+
+SELECT MIN(amount) FROM customers;
+
+SELECT * FROM customers
+WHERE city = 'yangon';
+
+SELECT MIN(amount) FROM customers
+WHERE  city = 'yangon';
+
+SELECT COUNT(*),MIN(amount) FROM customers
+WHERE city = 'yangon';
+
+#Error
+SELECT firstname,MIN(amount) FROM customers;
+
+SELECT * FROM customers
+WHERE amount = 17000;
+
+SELECT * FROM customers
+WHERE amount = ( SELECT MIN(amount) FROM customers );
+
+Note : 17000 = ( SELECT MIN(amount) FROM customers );
+
+
+...........................................
+
+->Exercise > MAX()
+
+SELECT MAX(age) FROM customers;
+
+SELECT MAX(amount) FROM customers;
+
+SELECT * FROM customers
+WHERE city = 'yangon';
+
+SELECT MAX(amount) FROM customers
+WHERE  city = 'yangon';
+
+SELECT COUNT(*),MAX(amount) FROM customers
+WHERE city = 'yangon';
+
+#Error
+SELECT firstname,MAX(amount) FROM customers;
+
+SELECT * FROM customers
+WHERE amount = 80000;
+
+SELECT * FROM customers
+WHERE amount = ( SELECT MAX(amount) FROM customers );
+
+Note : 80000 = ( SELECT MAX(amount) FROM customers );
+
+SELECT COUNT(*) FROM customers
+WHERE amount = ( SELECT MAX(amount) FROM customers );
 
 ...........................................
